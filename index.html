@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--google fonts-->
+
+  <!--fonts awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">
+        <i class="fa-solid fa-address-book"></i>
+        <div class="ss">
+          <h3>Contact<span>Hub</span></h3>
+          <p>Smart Contact Manager</p>
+        </div>
+      </div>
+
+      <div class="nav-icon">
+        <div class="btn">
+          <button id="openBtn"><i class="fa-solid fa-plus"></i> Add Contact</button>
+        </div>
+        <div class="ii">
+          <i class="fa-solid fa-bell"></i>
+          <i class="fa-solid fa-gear"></i>
+          <div class="image">
+            <img src="avatar-4 (1).jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="hero">
+    <div class="container">
+
+      <div class="cards">
+        <div class="card">
+          <div class="icon-p"><i class="fa-solid fa-users"></i></div>
+          <div>
+            <p>Total</p>
+            <span>0</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="icon-p"><i class="fa-solid fa-star"></i></div>
+          <div>
+            <p>Favorites</p>
+            <span>0</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="icon-p"><i class="fa-solid fa-heart-pulse"></i></div>
+          <div>
+            <p>Emergency</p>
+            <span>0</span>
+          </div>
+        </div>
+      </div>
+
+      <!--الجزء الثاني-->
+      <div class="main">
+
+        <div class="left">
+          <div class="title">
+            <h3>All Contacts</h3>
+            <p>Manage and organize your 0 contacts</p>
+          </div>
+
+          <form onsubmit="return false">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search by name, phone, or email...">
+          </form>
+
+          <div class="empty">
+            <div class="empty-icon"><i class="fa-solid fa-address-book"></i></div>
+            <h6>No contacts found</h6>
+            <small>Click "Add Contact" to get started</small>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="side-card">
+            <div class="side-head orange-bg">
+              <div class="icon-p orange sm"><i class="fa-solid fa-star"></i></div>
+              <div>
+                <h6>Favorites</h6>
+                <small>Quick access to starred contacts</small>
+              </div>
+            </div>
+            <div class="side-body">No favorites yet</div>
+          </div>
+
+          <div class="side-card">
+            <div class="side-head red-bg">
+              <div class="icon-p red sm"><i class="fa-solid fa-heart-pulse"></i></div>
+              <div>
+                <h6>Emergency</h6>
+                <small>Important contacts for urgent calls</small>
+              </div>
+            </div>
+            <div class="side-body">No emergency contacts</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal">
+    <div class="modal-box">
+
+      <div class="modal-head">
+        <div class="modal-title">
+          <div class="icon"></div>
+          <h4>Add New Contact</h4>
+        </div>
+        <button type="button" class="close-x" id="closeBtn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="mm">
+        <i class="fa-solid fa-user"></i>
+        <span>Change Photo</span>
+      </div>
+
+
+      <form onsubmit="return false">
+        <label>Full Name *</label>
+        <input type="text" placeholder="Enter full name">
+
+        <label>Phone Number *</label>
+        <input type="text" placeholder="e.g,01012345678">
+
+        <label>Email Address</label>
+        <input type="text" placeholder="name@example.com">
+
+        <label>Address</label>
+        <input type="text" placeholder="Enter address">
+
+        <label>Group</label>
+        <input type="text" placeholder="Select a group" style="color: black;">
+
+        <label>Address</label>
+        <input type="text" placeholder="Add notes about this contact">
+
+        <div class="checks">
+          <label class="check">
+            <input type="checkbox" id="fav">
+            <span class="box"></span>
+            <i class="fa-solid fa-star" style="color:#fbbf24"></i> Favorite
+          </label>
+
+          <label class="check">
+            <input type="checkbox" id="emg">
+            <span class="box"></span>
+            <i class="fa-solid fa-heart-pulse" style="color:#e11d48"></i> Emergency
+          </label>
+        </div>
+        
+        <button type="submit" class="save-btn-1">cancel</button>
+        <button type="submit" class="save-btn-2">Save contact</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="mina.js"></script>
+</body>
+
+</html>
